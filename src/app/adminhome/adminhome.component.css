@@ -1,0 +1,9 @@
+.adminhome {
+    text-align: center;  /* Center align the text */
+    margin-top: 50px;    /* Add some spacing from the top */
+}
+
+.adminhome h2 {
+    font-weight: bold;   /* Make text bold */
+    color: white;        /* Set text color to white */
+}

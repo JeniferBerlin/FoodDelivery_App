@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Menu List</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Item Name</th>
+          <th>Price (₹)</th>
+          <th>Restaurant Name</th>
+          <th>Restaurant Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let menu of menuItems">
+          <td>{{ menu.id }}</td>
+          <td>{{ menu.name }}</td>
+          <td>{{ menu.price }}</td>
+          <td>{{ menu.restaurant?.name }}</td>
+          <td>{{ menu.restaurant?.address }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

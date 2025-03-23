@@ -1,0 +1,42 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email"><i class="fa-solid fa-envelope"></i>Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          [(ngModel)]="loginRequest.email"
+          required
+          placeholder="Enter your email"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="password"><i class="fa-solid fa-lock"></i>Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          [(ngModel)]="loginRequest.password"
+          required
+          placeholder="Enter your password"
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid"><i class="fa-solid fa-user"></i>
+        Login
+      </button>
+    </form>
+  
+    <!-- Show error message if login fails -->
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  
+    <!-- Register link -->
+    <p class="register-link">
+      Don't have an account? <a routerLink="/register">SignUp here</a>
+    </p>
+  </div>

@@ -1,0 +1,75 @@
+.footer {
+    background-color: #391f97; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 10px 0; /* Reduced Vertical padding */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: fixed; /* Changed from 'fixed' to 'relative' */
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px; /* Reduced padding */
+  }
+  
+  .footer-section h3 {
+    color: #f4b400;
+    margin-bottom: 8px;
+  }
+  
+  .footer-section p, 
+  .footer-section ul {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    background-color: #818186;
+    padding: 5px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+  }
+  
+  /* Ensure content doesn't overlap with footer */
+  .main-content {
+    padding-bottom: 30px; /* Adjust according to footer height */
+  }
+  

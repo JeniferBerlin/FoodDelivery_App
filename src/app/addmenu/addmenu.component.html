@@ -1,1 +1,53 @@
-<p>addmenu works!</p>
+<div class="add-menu-container"><!--<div> acts as a container for the entire form.The class "add-menu-container" is for styling purposes, allowing you to apply CSS styles-->
+    <h2>Add MenuItem</h2><!--Displays a heading "Add MenuItem"-->
+    <form (ngSubmit)="onSubmit(menuForm)" #menuForm="ngForm">
+        <!--Name Field-->
+        <div class="form-group">
+            <label for="name">Menu Name:</label>
+            <input 
+              type="text" 
+              id="name" 
+              class="form-control" 
+              [(ngModel)]="menuItem.name" 
+              name="name" 
+              required>
+          </div>
+          <!-- Price Field -->
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input 
+          type="number" 
+          id="price" 
+          class="form-control" 
+          [(ngModel)]="menuItem.price" 
+          name="price" 
+          required>
+      </div>
+  
+      <!-- Restaurant Field -->
+      <div class="form-group">
+        <label for="restaurant">Restaurant Name:</label>
+        <input 
+          type="text" 
+          id="restaurant" 
+          class="form-control" 
+          [(ngModel)]="menuItem.restaurant.name" 
+          name="name" 
+          required>
+      </div>
+      <div class="form-group">
+        <label for="restaurant">Restaurant Address:</label>
+        <input 
+          type="text" 
+          id="restaurant" 
+          class="form-control" 
+          [(ngModel)]="menuItem.restaurant.address" 
+          name="address" 
+          required>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="menuForm.invalid">Add Menu</button>     
+
+    </form>
+</div>

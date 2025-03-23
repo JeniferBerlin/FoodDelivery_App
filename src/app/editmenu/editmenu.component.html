@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Menu Management</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Restaurant Name</th>
+        <th>Restaurant Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let menu of menuItems">
+        <td>{{ menu.id }}</td>
+        <td>{{ menu.name }}</td>
+        <td>{{ menu.price }}</td>
+        <td>{{ menu.restaurant?.name }}</td>
+        <td>{{ menu.restaurant?.address }}</td>
+        <td>
+          <button class="edit-btn" (click)="editMenu(menu)">Edit</button>
+          <button class="delete-btn" (click)="deleteMenu(menu.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="updateMenu" class="edit-form">
+    <h3>Edit Menu Item</h3>
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="updateMenu.name" type="text">
+
+    <label for="price">Price:</label>
+    <input id="price" [(ngModel)]="updateMenu.price" type="number">
+
+    <label for="restaurantName">Restaurant Name:</label>
+    <input id="restaurantName" [(ngModel)]="updateMenu.restaurant!.name" type="text" disabled>
+
+    <label for="restaurantAddress">Restaurant Address:</label>
+    <input id="restaurantAddress" [(ngModel)]="updateMenu.restaurant!.address" type="text" disabled>
+
+    <button class="save-btn" (click)="saveMenu()">Save</button>
+    <button class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+  </div>
+</div>

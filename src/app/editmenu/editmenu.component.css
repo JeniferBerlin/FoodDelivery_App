@@ -1,0 +1,122 @@
+/* Container styling */
+.container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+/* Buttons styling */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Edit Form Styling */
+.edit-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-form h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.edit-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.edit-form input[disabled] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* Buttons inside Edit Form */
+.save-btn {
+  background-color: #28a745;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}

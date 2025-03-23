@@ -1,6 +1,15 @@
-<nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/addmenu">AddMenu</a>
-    <a routerLink="/viewmenu">ViewMenu</a>
-    <a routerLink="/editmenu">UpdateMenu</a>
+<nav class="navbar">
+    <div class="navbar-container">
+        <a class="navbar-brand" href="#">FoodDelivery</a>
+        <ul class="navbar-menu">
+         <li><a routerLink="/adminhome">Home</a></li>
+         <li><a routerLink="/addmenu">AddMenu</a></li>
+         <li><a routerLink="/editmenu">UpdateMenu</a></li>    
+         <li><a routerLink="/viewmenu">MenuItem</a></li>
+         <li><a routerLink="/addrestaurant">AddRestaurant</a></li>
+         <li><a routerLink="/viewrestaurant">Restaurant</a></li>
+         <li><button (click)="logout()">Logout</button></li> 
+
+        </ul>
+    </div>
 </nav>

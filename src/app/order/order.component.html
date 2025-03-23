@@ -1,0 +1,39 @@
+<div class="order-container">
+    <h2>Order Form</h2>
+  
+   <!-- <div>
+      <label>Name:</label>
+      <span>{{ user?.name }}</span>
+    </div>
+    <div>
+      <label>Address:</label>
+      <span>{{ user?.address }}</span>
+    </div>
+    <div>
+      <label>Mobile No:</label>
+      <span>{{ user?.mobileno }}</span>
+    </div>-->
+  
+    <div>
+      <h3>Select Menu Items:</h3>
+      <div *ngFor="let item of menuItems">
+        <input type="checkbox" [value]="item.id" (change)="onItemSelect($event)">
+        {{ item.name }} - ₹{{ item.price }}
+      </div>
+    </div>
+  
+    <div>
+      <h4>Total Price: ₹{{ totalPrice }}</h4>
+    </div>
+  
+    <div>
+      <label>Payment Method:</label>
+      <select [(ngModel)]="paymentMethod">
+        <option value="">Select</option>
+        <option value="Cash">Cash</option>
+        <option value="Card">Card</option>
+      </select>
+    </div>
+  
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
